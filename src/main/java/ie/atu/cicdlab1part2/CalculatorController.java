@@ -1,13 +1,16 @@
 package ie.atu.cicdlab1part2;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CalculatorController {
-    @GetMapping("/calculate")
-    public Object calculate(@RequestParam int num1, int num2, String calculation){
+    //@GetMapping("/calculate")
+    //public Object calculate(@RequestParam int num1, int num2, String calculation)
+    @GetMapping("/calculate/{num1}/{num2}/{calculation}")
+    public Object calculate(@PathVariable int num1, @PathVariable int num2, @PathVariable String calculation){
 
         int total = 0;
 
