@@ -11,4 +11,5 @@ public class CalculatorController {
     public String details(@RequestParam int num1, int num2){
         return "Your name: "+ name + " Your age: " + age;
     }
+
 }
