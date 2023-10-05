@@ -9,7 +9,7 @@ public class CalculatorController {
 
     @GetMapping("/calculate")
     public String details(@RequestParam int num1, int num2){
-        return "Num1: "+ num1 + " Your age: " + num2;
+        return + num1 + " Your age: " + num2;
     }
 
 }
